@@ -1,0 +1,15 @@
+.add-location-btn{
+    width:47px;
+    height:47px;
+    margin:30px 0;
+    background-image: url('../Img/add.png');
+    background-size:cover;
+    opacity:0.8;
+
+    transition: all 0.3s;
+}
+
+.add-location-btn:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
