@@ -25,6 +25,7 @@ class AddLocationBox extends Component {
         return  (this.props.showAddLocation) ?
             (
             <div className="search-box">
+                <div className="exit" onClick={(e) => this.props.closeBox(0)}> </div>
                 <input className="text-input" type="text" onChange={(e) => this.updateSearchBox(e.target.value)}/>
                 <div className="button" onClick={() => this.addLocationName()}>
                     Search
