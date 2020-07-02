@@ -88,4 +88,21 @@
         font-size:60px;
     }
 
+    .weather-detailed .details{
+        z-index:3;
+        position:absolute;
+        bottom:0px;
+        right:0px;
+    
+        padding-left:15px;
+    
+        width:250px;
+        height:130px;
+    
+    
+        font-size:30px;
+        color:white;
+    }
+    
+
 }
