@@ -16,7 +16,7 @@ class AddLocationBox extends Component {
     addLocationName(){
         this.props.closeBox(0);
 
-        console.log('AddLocation', this.state.searchBox);
+       // console.log('AddLocation', this.state.searchBox);
         let location = this.state.searchBox;
         this.props.addLocationName(location);
     }

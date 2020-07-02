@@ -3,7 +3,7 @@ import "./WeatherCard.css"
 
 class WeatherCard extends Component {
     changeHighlightedLocation(id){
-        console.log('Id: ', id);
+        //console.log('Id: ', id);
         this.props.changeDetailedLocation(id);
     }
 

@@ -69,7 +69,7 @@ class App extends Component {
 
   async addBg(name){
     try {
-        const link = `https://app.zenserp.com/api/v2/search?apikey=49537c30-bc2f-11ea-bde9-c778342b1c35&q=${name}&tbm=isch`;
+        const link = `https://app.zenserp.com/api/v2/search?apikey=b2354c10-ba50-11ea-af3b-d9cfd1f6e9fa&q=${name}&tbm=isch`;
         const resp = await fetch(link);
         const data = await resp.json();
 
@@ -87,7 +87,7 @@ class App extends Component {
 
 
   render() { 
-   console.log('In render: ', this.state.locations);
+   //console.log('In render: ', this.state.locations);
 
     return ( Object.keys(this.state.locations).length === 0 && this.state.locations.constructor === Array ) ? 
           <div className="loader"></div> :
