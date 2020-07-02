@@ -3,6 +3,7 @@
     
     width:95%;
     height:100px;
+    min-height:90px;
     border-radius:25px;
     margin:15px 0;
     box-sizing:border-box;
@@ -28,8 +29,9 @@
     width: 100%;
     height: 100%;
     border-radius:25px;
-    background-image: linear-gradient(140deg, #00baf7 10%,white 57.5% ,white 70% , #4e9c40 100%);
-    opacity: .7;
+  /*  background-image: linear-gradient(140deg, #046a8b 10%,rgb(228, 225, 225) 60% ,rgb(199, 216, 192) 70% , #1faf06 100%); */
+    background-image: linear-gradient(#1572b7 0%, #1572b7 100%);
+    opacity: .75;
 }
 
 .weather-card .location{

@@ -1,14 +1,15 @@
 .weather-card-list{
     width:50vw;
-    height:95%;
+    height:95vh;
     box-sizing:border-box;
+    padding-right:12px;
     padding-right:12px;
 
     display:flex;
     flex-direction:column;
     align-items:center;
 
-    overflow:auto;
+    overflow-y:auto;
 }
 
 @media only screen and (max-width: 700px) {

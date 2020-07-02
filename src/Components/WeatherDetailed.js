@@ -7,6 +7,11 @@ const WeatherDetailed = (props) => (
             <span className="location"> {props.location} </span>
             <span className="temp"> {props.temp}&#176; </span>
         </div>
+        <div className="details">
+            <span>   Precipitatii: {props.precip}% </span>  <br/>
+            <span>   Umiditate: {props.humidity}% </span>  <br/>
+            <span>   Vant: {props.wind}km/h </span>  
+        </div>
     </div>
 );
 

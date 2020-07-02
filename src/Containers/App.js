@@ -30,7 +30,7 @@ class App extends Component {
 
 
   async addLocation(){
-    const location = await fetch('http://api.ipstack.com/95.77.243.31?access_key=0b73a0bff2d0819d2917a668b59c2772');
+    const location = await fetch('https://cors-anywhere.herokuapp.com/http://api.ipstack.com/95.77.243.31?access_key=0b73a0bff2d0819d2917a668b59c2772');
     const locationResp = await location.json();
     const locationName = locationResp.city;
 
@@ -69,7 +69,7 @@ class App extends Component {
 
   async addBg(name){
     try {
-        const link = `hettps://app.zenserp.com/api/v2/search?apikey=49537c30-bc2f-11ea-bde9-c778342b1c35&q=${name}&tbm=isch`;
+        const link = `https://app.zenserp.com/api/v2/search?apikey=49537c30-bc2f-11ea-bde9-c778342b1c35&q=${name}&tbm=isch`;
         const resp = await fetch(link);
         const data = await resp.json();
 
@@ -87,7 +87,7 @@ class App extends Component {
 
 
   render() { 
-   //console.log('In render: ', this.state.locations);
+   console.log('In render: ', this.state.locations);
 
     return ( Object.keys(this.state.locations).length === 0 && this.state.locations.constructor === Array ) ? 
           <div className="loader"></div> :
@@ -103,7 +103,11 @@ class App extends Component {
                 <WeatherDetailed 
                     location={this.state.locations[this.state.detailedLocation].location.name}
                     temp={this.state.locations[this.state.detailedLocation].current.temperature}
-                    bg={this.state.locations[this.state.detailedLocation].bg}/>
+                    bg={this.state.locations[this.state.detailedLocation].bg}
+                    precip={this.state.locations[this.state.detailedLocation].current.precip}
+                    humidity={this.state.locations[this.state.detailedLocation].current.humidity}
+                    wind={this.state.locations[this.state.detailedLocation].current.wind_speed}
+                    />
             </div>
           </div>
         )
