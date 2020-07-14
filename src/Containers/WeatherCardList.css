@@ -2,8 +2,8 @@
     width:50vw;
     height:95vh;
     box-sizing:border-box;
-    padding-right:13px;
-    padding-left:13px;
+    padding-right:25px;
+    padding-left:25px;
 
     display:flex;
     flex-direction:column;

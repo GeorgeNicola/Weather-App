@@ -60,6 +60,17 @@
     cursor:pointer;
 }
 
+.search-box .add-location-text{
+    position:absolute;
+    left:50%;
+    top:17.5px;
+    transform:translateX(-50%);
+
+    color:white;
+    font-family:Roboto;
+    font-weight:bold;
+}
+
 @media only screen and (max-width: 700px) {
     .search-box{
         margin-top:100vh;

@@ -30,9 +30,14 @@ class App extends Component {
 
 
   async addLocation(){
+    /*
     const location = await fetch('https://cors-anywhere.herokuapp.com/http://api.ipstack.com/95.77.243.31?access_key=0b73a0bff2d0819d2917a668b59c2772');
     const locationResp = await location.json();
     const locationName = locationResp.city;
+*/
+    //A week after I finished the app, I noticed that the API fetching is much slower, so I added the default location "Bucuresti"
+
+    const locationName = "Bucuresti";
 
     const link = `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=ff841349aa894a1e73d516cc496a2b25&query=${locationName}`;
 
@@ -41,7 +46,7 @@ class App extends Component {
 
 
     let newLocations = this.state.locations;
-    let bgURL = await this.addBg(nWeather.location.region);
+    let bgURL = "https://i.pinimg.com/originals/e7/2a/0b/e72a0be2c101e9087e4b7181276abd32.jpg";
     newLocations.push(Object.assign(nWeather, {id: this.state.locations.length, bg: bgURL}));
     
     this.setState({locations: newLocations});
