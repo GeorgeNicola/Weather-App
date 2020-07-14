@@ -23,9 +23,6 @@ class App extends Component {
    
   componentDidMount() {
     this.addLocation();
-
-    //this.addLocationName("New York");
-    //this.addBg("Tulcea");
   }
 
 
@@ -40,10 +37,8 @@ class App extends Component {
     const locationName = "Bucuresti";
 
     const link = `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=ff841349aa894a1e73d516cc496a2b25&query=${locationName}`;
-
     const resp = await fetch(link);
     const nWeather = await resp.json();
-
 
     let newLocations = this.state.locations;
     let bgURL = "https://i.pinimg.com/originals/e7/2a/0b/e72a0be2c101e9087e4b7181276abd32.jpg";
@@ -52,11 +47,7 @@ class App extends Component {
     this.setState({locations: newLocations});
   }
 
-
-  //, bg: this.addBg(nWeather.location.name)
-
   async addLocationName(name){
-   // console.log('AddLocationName Function');
     const link = `https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=ff841349aa894a1e73d516cc496a2b25&query=${name}`;
 
     const resp = await fetch(link);
@@ -69,8 +60,6 @@ class App extends Component {
     
     this.setState({locations: newLocations});
   }
-
-  //, bg: bgURL
 
   async addBg(name){
     try {
@@ -86,7 +75,6 @@ class App extends Component {
   }
 
   showAddLocation(value = 0){
-    //console.log(this.state.showAddLocation);
     this.setState({showAddLocation: value});
   }
 
