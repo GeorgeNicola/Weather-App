@@ -1,6 +1,6 @@
 This app detects your location and shows the temperature.
 More locations can be added.
-It takes approximate 5 seconds to load your location.
+It takes approximate 5 seconds to load your location ( because it used 2 API, one for weather info and one for getting a photo of the location ).
 
 The main reason I created this application was to learn how to use the API.
 
